@@ -9,7 +9,7 @@
 
 
 ## Installation
-For the analysis python3.8 was used ogether with a jupyther notebook. In order to get the project running you'll need also some 3rd party libraries which are all mentioned in the requirements.txt file, included in this project which can be used for generating a virtualenv.
+For the analysis python3.8 was used ogether with a jupyther notebook. In order to get the project running you'll need also some 3rd party libraries which are all mentioned in the [requirements.txt](./requirements.txt) file, included in this project which can be used for generating a virtualenv.
 
 
 ## Project Motivation
