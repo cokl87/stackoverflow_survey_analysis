@@ -92,3 +92,26 @@ def get_fraction_of_answers(data, col, sep=';'):
         ).stack().value_counts() / float(n_rows)
     # 'else': count all values and devide by number of answers
     return data[col].value_counts() / float(n_rows)
+
+
+def get_fraction_of_answers2(data, id_answer):
+    """
+    Calculates the percentage of participants giving a certain answer.
+    Adapted to work with dummy-columns.
+
+    Parameters:
+    -----------
+    data: pandas.DataFrame
+        Dataframe to be analysed
+    id_answer: str
+        name of the answer (beginning of column separated by '_' of the value of the answer
+
+    Returns:
+    --------
+    pd.Series
+        Series with value fractions (how many participants gave that answer)
+
+    """
+    data = data[data.columns[data.columns.str.startswith(id_answer)]]
+    data.columns = [col.split('_')[-1] for col in data.columns if col.startswith(id_answer)]
+    return data.sum() / float(data.shape[0])
