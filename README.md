@@ -1,4 +1,4 @@
-# stackoverflow_jobsatisfaction
+# Stack Overflow Survey - Analysis of job satisfaction
 
 ### Table of Contents
 1. [Installation](#installation)
